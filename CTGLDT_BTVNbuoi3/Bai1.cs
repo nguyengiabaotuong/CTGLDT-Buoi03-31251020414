@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 
 namespace CTGLDT_BTVNbuoi3
@@ -8,7 +9,15 @@ namespace CTGLDT_BTVNbuoi3
     {
         static void Main()
         {
-            string s = Console.ReadLine();
+            for (int i = 1; i <= 8; i++)
+            {
+                Console.Write("Nhap ca " + i + ": ");
+                string s = Console.ReadLine();
+                ktngoac(s);
+            }
+        }
+        static void ktngoac(string s)
+        {
             // Khởi tạo Stack 
             Stack<(char ch, int pos)> st = new Stack<(char ch, int pos)>();
             // Xét từng ký tự trong chuỗi.
