@@ -7,7 +7,7 @@ namespace CTGLDT_BTVNbuoi3
 {
     internal class Bai1
     {
-        static void Main()
+        static void Main1()
         {
             for (int i = 1; i <= 8; i++)
             {
