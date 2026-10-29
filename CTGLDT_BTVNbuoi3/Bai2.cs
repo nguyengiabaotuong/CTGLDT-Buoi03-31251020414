@@ -15,7 +15,7 @@ namespace CTGLDT_BTVNbuoi3
     }
     internal class Bai2
     {
-        static void Main()
+        static void Main2()
         {
             // Đọc n và k
              for (int i = 0; i < 5; i++)
@@ -24,7 +24,9 @@ namespace CTGLDT_BTVNbuoi3
                  int n = int.Parse(nk[0]);
                  int k = int.Parse(nk[1]);
                  mophongdv(n, k);
-             }        
+             }
+            //int n = 100000;
+            //int k = 10;
         }
         static void mophongdv(int n, int k)
         {
@@ -40,6 +42,20 @@ namespace CTGLDT_BTVNbuoi3
                 // Khách mới đến thì đưa vào cuối hàng đợi
                 hangdoi.Enqueue(kh);
             }
+            /* TỰ ĐỘNG SINH 100.000 KHÁCH HÀNG
+            Queue<KhachHang> hangDoi = new Queue<KhachHang>();
+            for (int i = 1; i <= n; i++)
+            {
+                KhachHang kh = new KhachHang();
+                kh.Sothutu = i;
+                kh.Thoidiemden = i - 1; // Khách i đến lúc i - 1
+                kh.Thoigianphucvu = 10; // Thời gian phục vụ s = 10
+
+                hangDoi.Enqueue(kh);
+            }
+               BẤM GIỜ BẮT ĐẦU CHẠY THUẬT TOÁN
+            Stopwatch dongHo = new Stopwatch();
+            dongHo.Start();*/
             // Mảng lưu thời gian rảnh của k quầy, ban đầu các quầy rảnh ở mốc 0
             long[] thoiGianRanh = new long[k];
             long tongThoiGianCho = 0;
@@ -84,11 +100,14 @@ namespace CTGLDT_BTVNbuoi3
                                   ", cho " + thoiGianCho +
                                   ", xong " + thoiGianXong);
             }
+            // DỪNG ĐỒNG HỒ
+            //dongHo.Stop();
             // Tính trung bình và in theo chuẩn InvariantCulture (dấu chấm)
             double trungBinhCho = (double)tongThoiGianCho / n;
             Console.WriteLine("Cho trung binh: " + trungBinhCho.ToString("0.00", CultureInfo.InvariantCulture));
             Console.WriteLine("Cho lau nhat: " + choLauNhat);
             Console.WriteLine("Hoan thanh luc: " + hoanThanhLuc);
+            //Console.WriteLine("Thoi gian chay: " + dongHo.Elapsed.TotalMilliseconds + " ms");
         }
     }
 }

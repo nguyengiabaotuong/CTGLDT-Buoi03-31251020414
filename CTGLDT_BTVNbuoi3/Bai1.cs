@@ -15,6 +15,25 @@ namespace CTGLDT_BTVNbuoi3
                 string s = Console.ReadLine();
                 ktngoac(s);
             }
+            // 1. SINH DỮ LIỆU TỰ ĐỘNG
+            // Ca 9: Tạo 500.000 dấu ngoặc mở, rồi cộng nối với 500.000 dấu ngoặc đóng
+            string nuaDau = new string('(', 500000);
+            string nuaSau = new string(')', 500000);
+            string input9 = nuaDau + nuaSau;
+            // Ca 10: Tạo 1.000.000 dấu ngoặc mở
+            string input10 = new string('(', 1000000);
+            // Khởi tạo đồng hồ bấm giờ
+            Stopwatch dongHo = new Stopwatch();
+            // 2. CHẠY THỬ CA 9
+            Console.WriteLine("--- Kiem thu Ca 9 ---");
+            dongHo.Start(); // Bấm nút bắt đầu tính giờ
+            ktngoac(input9); // Đưa chuỗi 1 triệu ký tự vào hàm
+            Console.WriteLine("Thoi gian chay: " + dongHo.ElapsedMilliseconds + " ms");
+            // 3. CHẠY THỬ CA 10
+            Console.WriteLine("--- Kiem thu Ca 10 ---");
+            dongHo.Restart(); // Reset đồng hồ về 0 và tự động chạy lại luôn
+            ktngoac(input10);
+            Console.WriteLine("Thoi gian chay: " + dongHo.ElapsedMilliseconds + " ms");
         }
         static void ktngoac(string s)
         {
