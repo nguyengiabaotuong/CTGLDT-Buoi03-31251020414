@@ -75,7 +75,7 @@ namespace CTGLDT_BTVNbuoi3
     }
     internal class Bai3
     {
-        static void Main()
+        static void Main3()
         {
             // Ca 1: Kiểm tra ngoại lệ khi lấy dữ liệu từ hàng rỗng 
             Console.WriteLine("=== KIEM THU CA 1 ===");
