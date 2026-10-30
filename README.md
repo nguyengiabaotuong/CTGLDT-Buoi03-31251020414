@@ -6,15 +6,6 @@
 
 ---
 
-# HƯỚNG DẪN BIÊN DỊCH VÀ CHẠY CHƯƠNG TRÌNH
-
-1. Mở thư mục bài tập (Bai1, Bai2, Bai3, Bai4) bằng Visual Studio hoặc Visual Studio Code.
-2. Đảm bảo máy tính đã cài đặt .NET SDK.
-3. Nhấn nút **Start (F5)** trong Visual Studio (nhớ Set Startup Project cho bài cần chạy) hoặc mở Terminal gõ lệnh `dotnet run` để chạy chương trình.
-4. Nhập dữ liệu theo các dòng thông báo trên màn hình (Console).
-
----
-
 # MÔ TẢ GIẢI PHÁP, ĐỘ PHỨC TẠP & KIỂM THỬ
 
 ### Bài 1: Kiểm tra biểu thức ngoặc hợp lệ
